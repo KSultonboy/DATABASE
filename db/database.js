@@ -1,8 +1,6 @@
-// db/database.js
-const sqlite3 = require("sqlite3").verbose();
-const db = new sqlite3.Database("./ruxshona.db");
-
-
+const Database = require('better-sqlite3');
+const db = new Database('./ruxshona.db');
+module.exports = db;
 
 db.run(`
   CREATE TABLE IF NOT EXISTS products (
